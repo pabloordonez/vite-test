@@ -5,7 +5,7 @@ class GithubStatusService {
   constructor(private readonly apiClient: ApiClient) {}
 
   async getSummary(): Promise<Summary> {
-    return await this.apiClient.get<Summary>("summary.json");
+    return await this.apiClient.get("summary.json");
   }
 
   async getStatus(): Promise<PageStatus> {
